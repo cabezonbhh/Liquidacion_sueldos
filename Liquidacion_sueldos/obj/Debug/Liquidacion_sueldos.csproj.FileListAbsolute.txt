@@ -1,0 +1,12 @@
+T:\Programacion y modelado\C#\Liquidacion_sueldos\Liquidacion_sueldos\bin\Debug\Liquidacion_sueldos.exe.config
+T:\Programacion y modelado\C#\Liquidacion_sueldos\Liquidacion_sueldos\bin\Debug\Liquidacion_sueldos.exe
+T:\Programacion y modelado\C#\Liquidacion_sueldos\Liquidacion_sueldos\bin\Debug\Liquidacion_sueldos.pdb
+T:\Programacion y modelado\C#\Liquidacion_sueldos\Liquidacion_sueldos\obj\Debug\Liquidacion_sueldos.csprojAssemblyReference.cache
+T:\Programacion y modelado\C#\Liquidacion_sueldos\Liquidacion_sueldos\obj\Debug\Liquidacion_sueldos.GUI.frm_main.resources
+T:\Programacion y modelado\C#\Liquidacion_sueldos\Liquidacion_sueldos\obj\Debug\Liquidacion_sueldos.Properties.Resources.resources
+T:\Programacion y modelado\C#\Liquidacion_sueldos\Liquidacion_sueldos\obj\Debug\Liquidacion_sueldos.csproj.GenerateResource.cache
+T:\Programacion y modelado\C#\Liquidacion_sueldos\Liquidacion_sueldos\obj\Debug\Liquidacion_sueldos.csproj.CoreCompileInputs.cache
+T:\Programacion y modelado\C#\Liquidacion_sueldos\Liquidacion_sueldos\obj\Debug\Liquidacion_sueldos.exe
+T:\Programacion y modelado\C#\Liquidacion_sueldos\Liquidacion_sueldos\obj\Debug\Liquidacion_sueldos.pdb
+T:\Programacion y modelado\C#\Liquidacion_sueldos\Liquidacion_sueldos\bin\Debug\Bunifu_UI_v1.5.3.dll
+T:\Programacion y modelado\C#\Liquidacion_sueldos\Liquidacion_sueldos\obj\Debug\Liquidacion_sueldos.csproj.CopyComplete
