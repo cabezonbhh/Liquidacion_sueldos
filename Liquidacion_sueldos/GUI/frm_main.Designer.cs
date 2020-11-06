@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_main));
             this.panel_up = new System.Windows.Forms.Panel();
+            this.lbl_fecha_hora = new System.Windows.Forms.Label();
             this.pic_ventana = new System.Windows.Forms.PictureBox();
             this.pic_maximizar = new System.Windows.Forms.PictureBox();
             this.pic_minimizar = new System.Windows.Forms.PictureBox();
@@ -38,26 +38,25 @@
             this.panel_contenido = new System.Windows.Forms.Panel();
             this.pic_logo = new System.Windows.Forms.PictureBox();
             this.panel_sidebar = new System.Windows.Forms.Panel();
-            this.lbl_nombre_principal = new System.Windows.Forms.Label();
+            this.btn_obra_social = new FontAwesome.Sharp.IconButton();
+            this.btn_convenios = new FontAwesome.Sharp.IconButton();
+            this.btn_empleados = new FontAwesome.Sharp.IconButton();
+            this.btn_empresas = new FontAwesome.Sharp.IconButton();
+            this.panel_logo = new System.Windows.Forms.Panel();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.btn_empresas = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.lbl_fecha_hora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.mover_main = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.panel_empresas = new System.Windows.Forms.Panel();
+            this.btn_sindicatos = new FontAwesome.Sharp.IconButton();
+            this.btn_config = new FontAwesome.Sharp.IconButton();
+            this.btn_reportes = new FontAwesome.Sharp.IconButton();
             this.panel_up.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_ventana)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_exit)).BeginInit();
-            this.panel_contenido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.panel_sidebar.SuspendLayout();
+            this.panel_logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,6 +72,16 @@
             this.panel_up.Name = "panel_up";
             this.panel_up.Size = new System.Drawing.Size(1280, 60);
             this.panel_up.TabIndex = 1;
+            // 
+            // lbl_fecha_hora
+            // 
+            this.lbl_fecha_hora.AutoSize = true;
+            this.lbl_fecha_hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fecha_hora.Location = new System.Drawing.Point(18, 25);
+            this.lbl_fecha_hora.Name = "lbl_fecha_hora";
+            this.lbl_fecha_hora.Size = new System.Drawing.Size(76, 25);
+            this.lbl_fecha_hora.TabIndex = 6;
+            this.lbl_fecha_hora.Text = "label1";
             // 
             // pic_ventana
             // 
@@ -125,7 +134,6 @@
             // 
             // panel_contenido
             // 
-            this.panel_contenido.Controls.Add(this.panel_empresas);
             this.panel_contenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_contenido.Location = new System.Drawing.Point(0, 60);
             this.panel_contenido.Name = "panel_contenido";
@@ -136,7 +144,7 @@
             // 
             this.pic_logo.BackColor = System.Drawing.Color.Transparent;
             this.pic_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_logo.Location = new System.Drawing.Point(50, 20);
+            this.pic_logo.Location = new System.Drawing.Point(50, 10);
             this.pic_logo.Name = "pic_logo";
             this.pic_logo.Size = new System.Drawing.Size(200, 200);
             this.pic_logo.TabIndex = 0;
@@ -144,260 +152,125 @@
             // 
             // panel_sidebar
             // 
-            this.panel_sidebar.Controls.Add(this.bunifuFlatButton5);
-            this.panel_sidebar.Controls.Add(this.bunifuFlatButton1);
-            this.panel_sidebar.Controls.Add(this.bunifuFlatButton4);
-            this.panel_sidebar.Controls.Add(this.bunifuFlatButton3);
-            this.panel_sidebar.Controls.Add(this.bunifuFlatButton2);
+            this.panel_sidebar.Controls.Add(this.btn_config);
+            this.panel_sidebar.Controls.Add(this.btn_sindicatos);
+            this.panel_sidebar.Controls.Add(this.btn_reportes);
+            this.panel_sidebar.Controls.Add(this.btn_obra_social);
+            this.panel_sidebar.Controls.Add(this.btn_convenios);
+            this.panel_sidebar.Controls.Add(this.btn_empleados);
             this.panel_sidebar.Controls.Add(this.btn_empresas);
-            this.panel_sidebar.Controls.Add(this.lbl_nombre_principal);
-            this.panel_sidebar.Controls.Add(this.pic_logo);
+            this.panel_sidebar.Controls.Add(this.panel_logo);
             this.panel_sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_sidebar.Location = new System.Drawing.Point(0, 60);
             this.panel_sidebar.Name = "panel_sidebar";
             this.panel_sidebar.Size = new System.Drawing.Size(300, 660);
             this.panel_sidebar.TabIndex = 3;
             // 
-            // lbl_nombre_principal
+            // btn_obra_social
             // 
-            this.lbl_nombre_principal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_nombre_principal.AutoSize = true;
-            this.lbl_nombre_principal.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_nombre_principal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nombre_principal.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_nombre_principal.Location = new System.Drawing.Point(12, 223);
-            this.lbl_nombre_principal.Name = "lbl_nombre_principal";
-            this.lbl_nombre_principal.Size = new System.Drawing.Size(268, 31);
-            this.lbl_nombre_principal.TabIndex = 1;
-            this.lbl_nombre_principal.Text = "Sistema de sueldos";
-            this.lbl_nombre_principal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_obra_social.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_obra_social.FlatAppearance.BorderSize = 0;
+            this.btn_obra_social.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_obra_social.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_obra_social.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_obra_social.IconChar = FontAwesome.Sharp.IconChar.FileMedical;
+            this.btn_obra_social.IconColor = System.Drawing.SystemColors.ControlText;
+            this.btn_obra_social.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_obra_social.IconSize = 48;
+            this.btn_obra_social.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_obra_social.Location = new System.Drawing.Point(0, 400);
+            this.btn_obra_social.Name = "btn_obra_social";
+            this.btn_obra_social.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btn_obra_social.Rotation = 0D;
+            this.btn_obra_social.Size = new System.Drawing.Size(300, 60);
+            this.btn_obra_social.TabIndex = 4;
+            this.btn_obra_social.Text = "Obras sociales";
+            this.btn_obra_social.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_obra_social.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_obra_social.UseVisualStyleBackColor = true;
+            this.btn_obra_social.Click += new System.EventHandler(this.btn_obra_social_Click);
+            // 
+            // btn_convenios
+            // 
+            this.btn_convenios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_convenios.FlatAppearance.BorderSize = 0;
+            this.btn_convenios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_convenios.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_convenios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_convenios.IconChar = FontAwesome.Sharp.IconChar.FileInvoiceDollar;
+            this.btn_convenios.IconColor = System.Drawing.SystemColors.ControlText;
+            this.btn_convenios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_convenios.IconSize = 48;
+            this.btn_convenios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_convenios.Location = new System.Drawing.Point(0, 340);
+            this.btn_convenios.Name = "btn_convenios";
+            this.btn_convenios.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btn_convenios.Rotation = 0D;
+            this.btn_convenios.Size = new System.Drawing.Size(300, 60);
+            this.btn_convenios.TabIndex = 3;
+            this.btn_convenios.Text = "Convenios";
+            this.btn_convenios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_convenios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_convenios.UseVisualStyleBackColor = true;
+            this.btn_convenios.Click += new System.EventHandler(this.btn_convenios_Click);
+            // 
+            // btn_empleados
+            // 
+            this.btn_empleados.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_empleados.FlatAppearance.BorderSize = 0;
+            this.btn_empleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_empleados.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_empleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_empleados.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.btn_empleados.IconColor = System.Drawing.SystemColors.ControlText;
+            this.btn_empleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_empleados.IconSize = 48;
+            this.btn_empleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_empleados.Location = new System.Drawing.Point(0, 280);
+            this.btn_empleados.Name = "btn_empleados";
+            this.btn_empleados.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btn_empleados.Rotation = 0D;
+            this.btn_empleados.Size = new System.Drawing.Size(300, 60);
+            this.btn_empleados.TabIndex = 2;
+            this.btn_empleados.Text = "Empleados";
+            this.btn_empleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_empleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_empleados.UseVisualStyleBackColor = true;
+            this.btn_empleados.Click += new System.EventHandler(this.btn_empleados_Click);
             // 
             // btn_empresas
             // 
-            this.btn_empresas.Activecolor = System.Drawing.Color.DarkViolet;
-            this.btn_empresas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(217)))), ((int)(((byte)(255)))));
-            this.btn_empresas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_empresas.BorderRadius = 0;
-            this.btn_empresas.ButtonText = "          Empresas";
-            this.btn_empresas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_empresas.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_empresas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_empresas.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_empresas.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_empresas.Iconimage")));
-            this.btn_empresas.Iconimage_right = null;
-            this.btn_empresas.Iconimage_right_Selected = null;
-            this.btn_empresas.Iconimage_Selected = null;
-            this.btn_empresas.IconMarginLeft = 0;
-            this.btn_empresas.IconMarginRight = 0;
-            this.btn_empresas.IconRightVisible = true;
-            this.btn_empresas.IconRightZoom = 0D;
-            this.btn_empresas.IconVisible = true;
-            this.btn_empresas.IconZoom = 90D;
-            this.btn_empresas.IsTab = false;
-            this.btn_empresas.Location = new System.Drawing.Point(7, 275);
+            this.btn_empresas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_empresas.FlatAppearance.BorderSize = 0;
+            this.btn_empresas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_empresas.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_empresas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_empresas.IconChar = FontAwesome.Sharp.IconChar.Building;
+            this.btn_empresas.IconColor = System.Drawing.SystemColors.ControlText;
+            this.btn_empresas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_empresas.IconSize = 48;
+            this.btn_empresas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_empresas.Location = new System.Drawing.Point(0, 220);
             this.btn_empresas.Name = "btn_empresas";
-            this.btn_empresas.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(217)))), ((int)(((byte)(255)))));
-            this.btn_empresas.OnHovercolor = System.Drawing.Color.MediumPurple;
-            this.btn_empresas.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_empresas.selected = false;
-            this.btn_empresas.Size = new System.Drawing.Size(290, 50);
-            this.btn_empresas.TabIndex = 2;
-            this.btn_empresas.Text = "          Empresas";
+            this.btn_empresas.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btn_empresas.Rotation = 0D;
+            this.btn_empresas.Size = new System.Drawing.Size(300, 60);
+            this.btn_empresas.TabIndex = 0;
+            this.btn_empresas.Text = "Empresas";
             this.btn_empresas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_empresas.Textcolor = System.Drawing.Color.Black;
-            this.btn_empresas.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_empresas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_empresas.UseVisualStyleBackColor = true;
+            this.btn_empresas.Click += new System.EventHandler(this.btn_empresas_Click);
             // 
-            // bunifuFlatButton2
+            // panel_logo
             // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.DarkViolet;
-            this.bunifuFlatButton2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(217)))), ((int)(((byte)(255)))));
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "          Empleados";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton2.Iconimage")));
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = true;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 90D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(7, 331);
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(217)))), ((int)(((byte)(255)))));
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.MediumPurple;
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(290, 50);
-            this.bunifuFlatButton2.TabIndex = 3;
-            this.bunifuFlatButton2.Text = "          Empleados";
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // bunifuFlatButton3
-            // 
-            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.DarkViolet;
-            this.bunifuFlatButton3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.bunifuFlatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(217)))), ((int)(((byte)(255)))));
-            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton3.BorderRadius = 0;
-            this.bunifuFlatButton3.ButtonText = "           Convenios";
-            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton3.Iconimage")));
-            this.bunifuFlatButton3.Iconimage_right = null;
-            this.bunifuFlatButton3.Iconimage_right_Selected = null;
-            this.bunifuFlatButton3.Iconimage_Selected = null;
-            this.bunifuFlatButton3.IconMarginLeft = 0;
-            this.bunifuFlatButton3.IconMarginRight = 0;
-            this.bunifuFlatButton3.IconRightVisible = true;
-            this.bunifuFlatButton3.IconRightZoom = 0D;
-            this.bunifuFlatButton3.IconVisible = true;
-            this.bunifuFlatButton3.IconZoom = 90D;
-            this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(7, 387);
-            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
-            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(217)))), ((int)(((byte)(255)))));
-            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.MediumPurple;
-            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(290, 50);
-            this.bunifuFlatButton3.TabIndex = 4;
-            this.bunifuFlatButton3.Text = "           Convenios";
-            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // bunifuFlatButton4
-            // 
-            this.bunifuFlatButton4.Activecolor = System.Drawing.Color.DarkViolet;
-            this.bunifuFlatButton4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.bunifuFlatButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(217)))), ((int)(((byte)(255)))));
-            this.bunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton4.BorderRadius = 0;
-            this.bunifuFlatButton4.ButtonText = "        Obras Sociales";
-            this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton4.Iconimage")));
-            this.bunifuFlatButton4.Iconimage_right = null;
-            this.bunifuFlatButton4.Iconimage_right_Selected = null;
-            this.bunifuFlatButton4.Iconimage_Selected = null;
-            this.bunifuFlatButton4.IconMarginLeft = 0;
-            this.bunifuFlatButton4.IconMarginRight = 0;
-            this.bunifuFlatButton4.IconRightVisible = true;
-            this.bunifuFlatButton4.IconRightZoom = 0D;
-            this.bunifuFlatButton4.IconVisible = true;
-            this.bunifuFlatButton4.IconZoom = 90D;
-            this.bunifuFlatButton4.IsTab = false;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(7, 443);
-            this.bunifuFlatButton4.Name = "bunifuFlatButton4";
-            this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(217)))), ((int)(((byte)(255)))));
-            this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.MediumPurple;
-            this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton4.selected = false;
-            this.bunifuFlatButton4.Size = new System.Drawing.Size(290, 50);
-            this.bunifuFlatButton4.TabIndex = 3;
-            this.bunifuFlatButton4.Text = "        Obras Sociales";
-            this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton4.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // bunifuFlatButton1
-            // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.DarkViolet;
-            this.bunifuFlatButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(217)))), ((int)(((byte)(255)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "           Sindicatos";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(7, 499);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(217)))), ((int)(((byte)(255)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.MediumPurple;
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(290, 50);
-            this.bunifuFlatButton1.TabIndex = 5;
-            this.bunifuFlatButton1.Text = "           Sindicatos";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // bunifuFlatButton5
-            // 
-            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.DarkViolet;
-            this.bunifuFlatButton5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.bunifuFlatButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(217)))), ((int)(((byte)(255)))));
-            this.bunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton5.BorderRadius = 0;
-            this.bunifuFlatButton5.ButtonText = "          Configuracion";
-            this.bunifuFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton5.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton5.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton5.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton5.Iconimage")));
-            this.bunifuFlatButton5.Iconimage_right = null;
-            this.bunifuFlatButton5.Iconimage_right_Selected = null;
-            this.bunifuFlatButton5.Iconimage_Selected = null;
-            this.bunifuFlatButton5.IconMarginLeft = 0;
-            this.bunifuFlatButton5.IconMarginRight = 0;
-            this.bunifuFlatButton5.IconRightVisible = true;
-            this.bunifuFlatButton5.IconRightZoom = 0D;
-            this.bunifuFlatButton5.IconVisible = true;
-            this.bunifuFlatButton5.IconZoom = 90D;
-            this.bunifuFlatButton5.IsTab = false;
-            this.bunifuFlatButton5.Location = new System.Drawing.Point(7, 555);
-            this.bunifuFlatButton5.Name = "bunifuFlatButton5";
-            this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(217)))), ((int)(((byte)(255)))));
-            this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.MediumPurple;
-            this.bunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton5.selected = false;
-            this.bunifuFlatButton5.Size = new System.Drawing.Size(290, 50);
-            this.bunifuFlatButton5.TabIndex = 6;
-            this.bunifuFlatButton5.Text = "          Configuracion";
-            this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton5.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // lbl_fecha_hora
-            // 
-            this.lbl_fecha_hora.AutoSize = true;
-            this.lbl_fecha_hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fecha_hora.Location = new System.Drawing.Point(18, 25);
-            this.lbl_fecha_hora.Name = "lbl_fecha_hora";
-            this.lbl_fecha_hora.Size = new System.Drawing.Size(76, 25);
-            this.lbl_fecha_hora.TabIndex = 6;
-            this.lbl_fecha_hora.Text = "label1";
+            this.panel_logo.BackColor = System.Drawing.Color.Transparent;
+            this.panel_logo.Controls.Add(this.pic_logo);
+            this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_logo.Location = new System.Drawing.Point(0, 0);
+            this.panel_logo.Name = "panel_logo";
+            this.panel_logo.Size = new System.Drawing.Size(300, 220);
+            this.panel_logo.TabIndex = 1;
             // 
             // timer1
             // 
@@ -410,13 +283,77 @@
             this.mover_main.TargetControl = this.panel_up;
             this.mover_main.Vertical = true;
             // 
-            // panel_empresas
+            // btn_sindicatos
             // 
-            this.panel_empresas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_empresas.Location = new System.Drawing.Point(0, 0);
-            this.panel_empresas.Name = "panel_empresas";
-            this.panel_empresas.Size = new System.Drawing.Size(1280, 660);
-            this.panel_empresas.TabIndex = 0;
+            this.btn_sindicatos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_sindicatos.FlatAppearance.BorderSize = 0;
+            this.btn_sindicatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_sindicatos.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_sindicatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_sindicatos.IconChar = FontAwesome.Sharp.IconChar.FileContract;
+            this.btn_sindicatos.IconColor = System.Drawing.SystemColors.ControlText;
+            this.btn_sindicatos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_sindicatos.IconSize = 48;
+            this.btn_sindicatos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_sindicatos.Location = new System.Drawing.Point(0, 520);
+            this.btn_sindicatos.Name = "btn_sindicatos";
+            this.btn_sindicatos.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btn_sindicatos.Rotation = 0D;
+            this.btn_sindicatos.Size = new System.Drawing.Size(300, 60);
+            this.btn_sindicatos.TabIndex = 8;
+            this.btn_sindicatos.Text = "Sindicatos";
+            this.btn_sindicatos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_sindicatos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_sindicatos.UseVisualStyleBackColor = true;
+            this.btn_sindicatos.Click += new System.EventHandler(this.btn_sindicatos_Click);
+            // 
+            // btn_config
+            // 
+            this.btn_config.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_config.FlatAppearance.BorderSize = 0;
+            this.btn_config.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_config.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_config.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_config.IconChar = FontAwesome.Sharp.IconChar.Tools;
+            this.btn_config.IconColor = System.Drawing.SystemColors.ControlText;
+            this.btn_config.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_config.IconSize = 48;
+            this.btn_config.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_config.Location = new System.Drawing.Point(0, 580);
+            this.btn_config.Name = "btn_config";
+            this.btn_config.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btn_config.Rotation = 0D;
+            this.btn_config.Size = new System.Drawing.Size(300, 60);
+            this.btn_config.TabIndex = 9;
+            this.btn_config.Text = "Configuracion";
+            this.btn_config.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_config.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_config.UseVisualStyleBackColor = true;
+            this.btn_config.Click += new System.EventHandler(this.btn_config_Click);
+            // 
+            // btn_reportes
+            // 
+            this.btn_reportes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_reportes.FlatAppearance.BorderSize = 0;
+            this.btn_reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_reportes.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_reportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reportes.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
+            this.btn_reportes.IconColor = System.Drawing.SystemColors.ControlText;
+            this.btn_reportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_reportes.IconSize = 48;
+            this.btn_reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_reportes.Location = new System.Drawing.Point(0, 460);
+            this.btn_reportes.Name = "btn_reportes";
+            this.btn_reportes.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btn_reportes.Rotation = 0D;
+            this.btn_reportes.Size = new System.Drawing.Size(300, 60);
+            this.btn_reportes.TabIndex = 6;
+            this.btn_reportes.Text = "Reportes";
+            this.btn_reportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_reportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_reportes.UseVisualStyleBackColor = true;
+            this.btn_reportes.Click += new System.EventHandler(this.btn_reportes_Click);
             // 
             // frm_main
             // 
@@ -429,7 +366,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Principal";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.frm_main_Load);
             this.panel_up.ResumeLayout(false);
             this.panel_up.PerformLayout();
@@ -437,16 +374,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_maximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_exit)).EndInit();
-            this.panel_contenido.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
             this.panel_sidebar.ResumeLayout(false);
-            this.panel_sidebar.PerformLayout();
+            this.panel_logo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+        
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Panel panel_up;
         private System.Windows.Forms.Panel panel_contenido;
@@ -456,16 +393,16 @@
         private System.Windows.Forms.PictureBox pic_minimizar;
         private System.Windows.Forms.PictureBox pic_exit;
         private System.Windows.Forms.PictureBox pic_logo;
-        private System.Windows.Forms.Label lbl_nombre_principal;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton5;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_empresas;
         private System.Windows.Forms.Label lbl_fecha_hora;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel_logo;
+        private FontAwesome.Sharp.IconButton btn_obra_social;
+        private FontAwesome.Sharp.IconButton btn_convenios;
+        private FontAwesome.Sharp.IconButton btn_empleados;
+        private FontAwesome.Sharp.IconButton btn_empresas;
         private Bunifu.Framework.UI.BunifuDragControl mover_main;
-        private System.Windows.Forms.Panel panel_empresas;
+        private FontAwesome.Sharp.IconButton btn_config;
+        private FontAwesome.Sharp.IconButton btn_sindicatos;
+        private FontAwesome.Sharp.IconButton btn_reportes;
     }
 }

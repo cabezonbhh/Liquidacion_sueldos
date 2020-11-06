@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FontAwesome.Sharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace Liquidacion_sueldos.GUI
     public partial class frm_main : Form
     {
         private int tema = 0;
+        private IconButton seleccionado;
         public frm_main()
         {
             InitializeComponent();
@@ -46,12 +48,12 @@ namespace Liquidacion_sueldos.GUI
         {
             try
             {
-                this.pic_logo.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Logo/logo_prueba.png"));
+                this.pic_logo.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Logo/mi_logo.png"));
                 this.pic_logo.SizeMode = PictureBoxSizeMode.Zoom;
                 this.panel_sidebar.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Temas/Tema " + this.tema + "/SideBar_Panel_Menu_Main.jpg"));
                 this.panel_sidebar.BackColor = Color.FromArgb(192, 187, 255);
-                this.panel_contenido.BackColor = Color.FromArgb(220,217,255);
-                this.panel_up.BackColor = Color.FromArgb(192, 187, 255);
+                this.panel_contenido.BackColor = Color.White;
+                this.panel_up.BackColor = Color.FromArgb(192, 187, 255); 
             }
             catch(Exception ex)
             {
@@ -90,6 +92,41 @@ namespace Liquidacion_sueldos.GUI
         private void timer1_Tick(object sender, EventArgs e)
         {
             lbl_fecha_hora.Text = DateTime.Now.ToString();
+        }
+
+        private void btn_empresas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_empleados_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_convenios_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_obra_social_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_reportes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_sindicatos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_config_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
